@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>STUMS -- We are the best</title>
+    <title>STUMS</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Free Flat Admin Bootstrap Themes">
+    <meta name="description" content="Free LZM STUMS Bootstrap Themes">
     <meta name="author" content="Charuwit Nodthaisong">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -26,13 +26,16 @@
     <script type="text/javascript" src="~/Content/asset/js/Chart.min.js"></script>
     <script src="~/Content/asset/js/bootstrap-select.min.js"></script>
     <script src="~/Content/asset/js/main.js"></script>
-    
+
 </head>
 
 <body class="flat-blue sidebar-collapse">
+    @{
+        STUMS.Models.LayoutData ld = ViewBag.LayoutData;
+    }
     <div class="sidebar">
         <div class="menu-control toggle-sidebar">
-            <a class="navbar-brand" href="#"><i class="fa fa-bar-chart"></i> Flat Admin</a><!--滑动条打开 网站名称/Logo -->
+            <a class="navbar-brand" href="#"><i class="fa fa-bar-chart"></i> LZM STUMS</a><!--滑动条打开 网站名称/Logo -->
             <i class="fa fa-bars navicon"></i>
         </div>
         <!-- 菜单栏 -->
@@ -41,7 +44,7 @@
                 <a href="index.html" class="active">
                     <div>
                         <i class="menu-icon fa fa-th-large"></i>
-                        <span class="menu-title">Dashboard</span>
+                        <span class="menu-title">Home</span>
                     </div>
                 </a>
             </li>
@@ -49,7 +52,7 @@
                 <a href="element.html">
                     <div>
                         <i class="menu-icon fa fa-desktop"></i>
-                        <span class="menu-title">UI Elements</span>
+                        <span class="menu-title">Stu Msg</span>
                     </div>
                 </a>
             </li>
@@ -57,7 +60,7 @@
                 <a href="table.html">
                     <div>
                         <i class="menu-icon fa fa-table"></i>
-                        <span class="menu-title">Table</span>
+                        <span class="menu-title">Class</span>
                     </div>
                 </a>
             </li>
@@ -65,17 +68,16 @@
                 <a href="form.html">
                     <div>
                         <i class="menu-icon fa fa-file-text-o"></i>
-                        <span class="menu-title">Form</span>
+                        <span class="menu-title">Course</span>
                     </div>
                 </a>
             </li>
 
             <li class="submenu dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
                     <div>
                         <i class="menu-icon fa fa-slack"></i>
-                        <span class="menu-title">Page Example</span>
+                        <span class="menu-title">Teachers</span>
                     </div>
                 </a>
                 <ul class="dropdown-menu">
@@ -118,7 +120,7 @@
             </li>
         </ul>
     </div>
-    <div class="tlinks">Collect from <a href="" title="网站模板">网站模板</a></div>
+    <div class="tlinks">Author LZM</div>
     <div class="content-container wrap">
         <!-- 顶部导航栏 -->
         <nav class="navbar navbar-default">
@@ -133,7 +135,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <!--滑动条关闭，顶部栏  网站名称/Logo -->
-                        <a class="navbar-brand" href="#"><i class="fa fa-bar-chart"></i> Flat Admin</a>
+                        <a class="navbar-brand" href="#"><i class="fa fa-bar-chart"></i>LZM STUMS</a>
                     </div>
                     <!-- 顶部右边三个下拉框 -->
                     <ul class="nav navbar-nav navbar-right">
@@ -149,7 +151,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <!-- 预警提示信息 -->
                         <li class="dropdown notification-alert">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-exclamation-circle"></i> 3</a>
@@ -187,25 +189,47 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <!-- 登陆用户的信息 -->
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emily Hart <span class="caret"></span></a>
-                            <ul class="dropdown-menu user-info">
-                                <li class="dropdown-title-bar">
-                                    <img src="images/profile.jpg" class="profile-img">
-                                </li>
-                                <li>
-                                    <div class="navbar-login">
-                                        <h4 class="user-name">Emily Hart</h4>
-                                        <p>emily_hart@email.com</p>
-                                        <div class="btn-group margin-bottom-2x" role="group">
-                                            <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
-                                            <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+
+                            @if (ld.IsLogin)
+                            {
+                                //
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emily Hart<span class="caret"></span></a>
+                                <ul class="dropdown-menu user-info">
+                                    <li class="dropdown-title-bar">
+                                        <img src="images/profile.jpg" class="profile-img">
+                                    </li>
+                                    <li>
+                                        <div class="navbar-login">
+                                            <h4 class="user-name">Emily Hart</h4>
+                                            <p>emily_hart@email.com</p>
+                                            <div class="btn-group margin-bottom-2x" role="group">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            }
+                            else
+                            {
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sign In<span class="caret"></span></a>
+                                <ul class="dropdown-menu user-info">
+                                    <li>
+                                        <div class="navbar-login">
+                                            <h4 class="user-name">Emily Hart</h4>
+                                            <p>emily_hart@email.com</p>
+                                            <div class="btn-group margin-bottom-2x" role="group">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            }
+
                         </li>
                     </ul>
                 </div>
@@ -213,7 +237,7 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-        
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
@@ -222,18 +246,18 @@
             </div>
 
             @*<div class="row">
-                <div class="col-xs-12">
+                    <div class="col-xs-12">
 
-                    <ol class="breadcrumb">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">Dashboard</a>
-                        </li>
-                    </ol>
-                </div>
-            </div>*@
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">Dashboard</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>*@
             <div class="row">
                 @RenderBody()
             </div>
@@ -246,5 +270,3 @@
 </body>
 
 </html>
-
-

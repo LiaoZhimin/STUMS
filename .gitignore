@@ -3,3 +3,12 @@
 ################################################################################
 
 /packages
+/.vs
+/STUMS/bin
+/STUMS/obj/Debug
+/STUMS_DAL/obj/Debug
+/STUMS_Helper/obj/Debug
+/STUMS_Models/obj/Debug
+/STUMS_MQ/obj/Debug
+/STUMS_Redis/obj/Debug
+/STUMS_WebAPI_Caller/obj/Debug
