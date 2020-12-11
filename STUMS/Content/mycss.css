@@ -1,0 +1,18 @@
+﻿body {
+}
+
+.my-table{
+    width: 100%;height:25rem;text-wrap:none;overflow:scroll;
+}
+.my-table th{
+    width:120px;
+}
+.my-th{
+    width:120px;
+}
+.my-th-tool{
+    min-width:180px;
+}
+.my-th-tool a{
+    margin-right:2px;
+}
