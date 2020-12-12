@@ -12,3 +12,5 @@
 /STUMS_MQ/obj/Debug
 /STUMS_Redis/obj/Debug
 /STUMS_WebAPI_Caller/obj/Debug
+/STUMS_WebAPI/bin
+/STUMS_WebAPI/obj/Debug

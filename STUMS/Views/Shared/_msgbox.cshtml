@@ -1,0 +1,19 @@
+﻿
+@{ 
+    STUMS.Models.MsgBoxData mbd = PageData["data"] == null ? new STUMS.Models.MsgBoxData() : PageData["data"];
+
+}
+
+
+<div id="msgbox_alert" class="alert @mbd.GetClass() alert-dismissible" role="alert" style="display:none;">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>   
+    <label id="msgbox_msg">@mbd.Msg</label>
+</div>
+<script>
+    function msgbox_setMsg(msg) {
+        $('#msgbox_msg').text(msg);
+        $('#msgbox_alert').fadeIn();
+    }
+</script>

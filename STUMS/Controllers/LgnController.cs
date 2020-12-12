@@ -9,7 +9,7 @@ namespace STUMS.Controllers
 {
     public class LgnController : ApiController
     {
-        public string Post()
+        public string Post([FromBody]STUMS_Models.Lgn_M mm)
         {
             return "OK";
         }

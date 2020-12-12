@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STUMS_DAL", "STUMS_DAL\STUM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STUMS_WebAPI_Caller", "STUMS_WebAPI_Caller\STUMS_WebAPI_Caller.csproj", "{26825635-2791-4ED0-9644-E1D2162081C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STUMS_WebAPI", "STUMS_WebAPI\STUMS_WebAPI.csproj", "{CFF271A2-3AB3-4E9B-8027-8BF133D98581}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{26825635-2791-4ED0-9644-E1D2162081C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26825635-2791-4ED0-9644-E1D2162081C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26825635-2791-4ED0-9644-E1D2162081C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF271A2-3AB3-4E9B-8027-8BF133D98581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF271A2-3AB3-4E9B-8027-8BF133D98581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF271A2-3AB3-4E9B-8027-8BF133D98581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF271A2-3AB3-4E9B-8027-8BF133D98581}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

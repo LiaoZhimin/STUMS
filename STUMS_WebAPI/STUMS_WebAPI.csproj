@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{14A8DB7D-4D31-42BA-B2D8-0FA2153C6C50}</ProjectGuid>
+    <ProjectGuid>{CFF271A2-3AB3-4E9B-8027-8BF133D98581}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>STUMS</RootNamespace>
-    <AssemblyName>STUMS</AssemblyName>
+    <RootNamespace>STUMS_WebAPI</RootNamespace>
+    <AssemblyName>STUMS_WebAPI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -76,15 +76,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -94,14 +86,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -111,112 +95,37 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Web.Razor">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Webpages">
-      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Webpages.Deployment">
-      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Webpages.Razor">
-      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Helpers">
-      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\asset\css\animate.css" />
-    <Content Include="Content\asset\css\awesome-bootstrap-checkbox.css" />
-    <Content Include="Content\asset\css\bootstrap-select.min.css" />
-    <Content Include="Content\asset\css\bootstrap.min.css" />
-    <Content Include="Content\asset\css\font-awesome.min.css" />
-    <Content Include="Content\asset\css\jquery.dataTables.min.css" />
-    <Content Include="Content\asset\css\login.css" />
-    <Content Include="Content\asset\css\select2-bootstrap.css" />
-    <Content Include="Content\asset\css\select2.css" />
-    <Content Include="Content\asset\css\style.css" />
-    <Content Include="Content\asset\css\theme.css" />
-    <Content Include="Content\asset\custom-dashboard.html" />
-    <Content Include="Content\asset\element.html" />
-    <Content Include="Content\asset\fonts\font-awesome\fontawesome-webfont.svg" />
-    <Content Include="Content\asset\form.html" />
-    <Content Include="Content\asset\images\login_bg4.png" />
-    <Content Include="Content\asset\images\profile.jpg" />
-    <Content Include="Content\asset\images\select2\select2-spinner.gif" />
-    <Content Include="Content\asset\images\select2\select2.png" />
-    <Content Include="Content\asset\images\select2\select2x2.png" />
-    <Content Include="Content\asset\index.html" />
-    <Content Include="Content\asset\js\bootstrap-select.min.js" />
-    <Content Include="Content\asset\js\bootstrap.min.js" />
-    <Content Include="Content\asset\js\Chart.min.js" />
-    <Content Include="Content\asset\js\dataTables.bootstrap.js" />
-    <Content Include="Content\asset\js\index.js" />
-    <Content Include="Content\asset\js\jquery-2.1.3.min.js" />
-    <Content Include="Content\asset\js\jquery.dataTables.min.js" />
-    <Content Include="Content\asset\js\jquery.knob.min.js" />
-    <Content Include="Content\asset\js\main.js" />
-    <Content Include="Content\mycss.css" />
-    <Content Include="Content\myjs.js" />
-    <Content Include="Content\asset\js\select2.min.js" />
-    <Content Include="Content\asset\login.html" />
-    <Content Include="Content\asset\register.html" />
-    <Content Include="Content\asset\table.html" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="Content\asset\fonts\font-awesome\fontawesome-webfont.eot" />
-    <Content Include="Content\asset\fonts\font-awesome\fontawesome-webfont.ttf" />
-    <Content Include="Content\asset\fonts\font-awesome\fontawesome-webfont.woff" />
-    <Content Include="Content\asset\fonts\font-awesome\FontAwesome.otf" />
-    <Content Include="Content\data.json" />
-    <None Include="scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="scripts\jquery-1.10.2.js" />
-    <Content Include="scripts\jquery-1.10.2.min.js" />
-    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LgnController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\LayoutData.cs" />
-    <Compile Include="Models\MsgBoxData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Shared\_login.cshtml" />
-    <Content Include="Views\Shared\_msgbox.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -226,20 +135,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\STUMS_DAL\STUMS_DAL.csproj">
-      <Project>{e62381ed-e293-4782-abfb-95ba4507435a}</Project>
-      <Name>STUMS_DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\STUMS_Helper\STUMS_Helper.csproj">
-      <Project>{1730fa5a-35ba-4efc-89a2-6bc63d1a0fb7}</Project>
-      <Name>STUMS_Helper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\STUMS_Models\STUMS_Models.csproj">
-      <Project>{77dcc488-d649-45f4-a442-1044bf59b18c}</Project>
-      <Name>STUMS_Models</Name>
-    </ProjectReference>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -254,9 +151,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60065</DevelopmentServerPort>
+          <DevelopmentServerPort>54489</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60065/</IISUrl>
+          <IISUrl>http://localhost:54489/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

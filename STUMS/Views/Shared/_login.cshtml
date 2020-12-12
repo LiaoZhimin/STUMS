@@ -14,12 +14,12 @@
             <form id="login-form">
                 <div class="control">
                     <div class="label">User Code</div>
-                    <input type="text" class="form-control inup" value="" />
+                    <input type="text" class="form-control inup" name="UUUU" value="" />
                 </div>
                 <div class="control">
                     <div class="label">Password</div>
-                    <input type="password" class="form-control inup" value="" />
-                </div>
+                    <input type="password" class="form-control inup" name="pppp" value="" />
+                </div>              
                 <div class="login-button">
                     <button type="button" id="login" class="btn btn-orange" value="Login">Login</button>
                 </div>
@@ -27,6 +27,14 @@
         </div>
     </div>
 </div>
+
+@RenderPage("~/Views/Shared/_msgbox.cshtml",
+    new {
+        data =new STUMS.Models.MsgBoxData() {
+            BoxType = STUMS.Models.boxType.danger
+        }
+    })
+
 <script type="text/javascript">
     $(function () {
         $("#login-form").submit(function () {
@@ -41,6 +49,10 @@
         //
         $('#login').click(function () {
             let dic = {
+                'UUUU': $('.inup[name=UUUU]').val(),
+                'pppp': $('.inup[name=pppp]').val()
+            }
+            if (!dic.UUUU) {
 
             }
         });
