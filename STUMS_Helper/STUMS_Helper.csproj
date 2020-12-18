@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Log.cs" />
+    <Compile Include="LogHelper.cs" />
     <Compile Include="SS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
