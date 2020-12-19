@@ -8,6 +8,8 @@ namespace STUMS_Helper
 {
     public class SS
     {
+        #region Log
+
         /// <summary>
         /// 写入log
         /// </summary>
@@ -44,6 +46,22 @@ namespace STUMS_Helper
             lh.WriteLogAsynDate(new Log(msg, beforeArgs));
             return lh.Msg;
         }
+
+        #endregion
+
+        #region MD5
+        public static string MD5Encrypt(string value, string key)
+        {
+            var mm = new MD5Helper();
+            return mm.MD5Encrypt(value, key);
+        }
+        public static string MD5Decrypt(string value, string key)
+        {
+            var mm = new MD5Helper();
+            return mm.MD5Decrypt(value, key);
+        }
+        #endregion
+
         /// <summary>
         /// 处理异常报错信息，取得自己需要的异常信息
         /// </summary>
