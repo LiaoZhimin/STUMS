@@ -12,6 +12,10 @@ namespace STUMS_Models
         public string TName { get; set; }
         public int Age { get; set; }
         public bool Sex { get; set; }
-         
+        public string Addr { get; set; }
+        public string Email { get; set; }
+        public string QQ { get; set; }
+        public string Phone { get; set; }
+
     }
 }
