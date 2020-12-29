@@ -8,7 +8,7 @@ namespace STUMS_Models
 {
     public class School
     {
-        public int ID { get; set; }
+        public string No { get; set; }
         public string SchoolName { get; set; }
         public string Addr { get; set; }
         public double Longitude { get; set; }
