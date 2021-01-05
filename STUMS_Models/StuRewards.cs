@@ -14,6 +14,7 @@ namespace STUMS_Models
         public string Date { get; set; }
         public string Giver { get; set; }
         public string Remark { get; set; }
-
+        public string Creator { get; set; }
+        public DateTime CreateTime { get; set; }
     }
 }

@@ -14,5 +14,7 @@ namespace STUMS_Models
         public string Nation { get; set; }
         public string Addr { get; set; }
         public string Phone { get; set; }
+        public string Creator { get; set; }
+        public DateTime CreateTime { get; set; }
     }
 }
