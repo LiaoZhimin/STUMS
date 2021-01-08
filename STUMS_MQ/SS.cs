@@ -8,5 +8,6 @@ namespace STUMS_MQ
 {
     public class SS
     {
+
     }
 }

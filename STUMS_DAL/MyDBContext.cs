@@ -22,6 +22,8 @@
         //的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=390109。
 
         public virtual DbSet<School> Schools { get; set; }
+
+
     }
 
     //public class MyEntity
