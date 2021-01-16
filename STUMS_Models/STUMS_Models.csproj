@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassMsg.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Dormitory.cs" />
     <Compile Include="IDCards.cs" />

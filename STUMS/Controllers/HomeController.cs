@@ -12,7 +12,7 @@ namespace STUMS.Controllers
         public ActionResult Index()
         {
             STUMS_DAL.DAO.SchoolDAO dao = new STUMS_DAL.DAO.SchoolDAO();
-            dao.Add(new STUMS_Models.School() { ID = 1, SchoolName = "是", Addr = "shenzhen" });
+            dao.Add(new STUMS_Models.School() { No="JYXY", SchoolName = "是", Addr = "shenzhen" });
             bool b = dao.SaveChanges();
             return View();
         }

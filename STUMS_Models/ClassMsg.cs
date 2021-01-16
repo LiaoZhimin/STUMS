@@ -4,13 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+
 namespace STUMS_Models
 {
-    public class Major
+    public class ClassMsg
     {
         [Key]
-        public string No { get; set; }
+        public string CNO { get; set; }
         public string Name { get; set; }
-        
+        public string Remark { get; set; }        
+        public DateTime CreateTime { get; set; }
+        public DateTime CloseTime { get; set; }        
     }
 }

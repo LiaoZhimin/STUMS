@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BaseDAO.cs" />
     <Compile Include="DAO\SchoolDAO.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyDBContext.cs" />
     <Compile Include="MyDBContextFactory.cs" />
     <Compile Include="SS.cs" />
@@ -65,7 +66,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

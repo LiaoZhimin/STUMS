@@ -22,13 +22,16 @@
         //的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=390109。
 
         public virtual DbSet<School> Schools { get; set; }
-
-
+        public virtual DbSet<IDCards> IDCards { get; set; }
+        public virtual DbSet<Students> Students { get; set; }
+        public virtual DbSet<StuPunishments> StuPunishments { get; set; }
+        public virtual DbSet<StuRewards> StuRewards { get; set; }
+        public virtual DbSet<StuFamilies> StuFamilies { get; set; }
+        public virtual DbSet<Teachers> Teachers { get; set; }
+        public virtual DbSet<Workers> Workers { get; set; }
+        public virtual DbSet<Major> Majors { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Dormitory> Dormitorys { get; set; }
+        public virtual DbSet<StudentMessage> StudentMessages { get; set; }
     }
-
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }
