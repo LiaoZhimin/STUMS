@@ -57,6 +57,7 @@
     <Compile Include="StuPunishments.cs" />
     <Compile Include="StuRewards.cs" />
     <Compile Include="Teachers.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Workers.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -33,5 +33,6 @@
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Dormitory> Dormitorys { get; set; }
         public virtual DbSet<StudentMessage> StudentMessages { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

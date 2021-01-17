@@ -13,9 +13,9 @@ namespace STUMS_DAL
         /// <summary>
         /// 创建EF上下文对象,已存在就直接取,不存在就创建,保证线程内是唯一。
         /// </summary>
-        public static DbContext Create()
+        public static MyDBContext Create()
         {
-            DbContext dbContext = CallContext.GetData("DbContext") as DbContext;
+            MyDBContext dbContext = CallContext.GetData("MyDBContext") as MyDBContext;
             if (dbContext == null)
             {
                 dbContext = new MyDBContext();               
@@ -23,6 +23,7 @@ namespace STUMS_DAL
                 CallContext.SetData("DbContext", dbContext);               
             }
             return dbContext;
+
         }
     }
 }

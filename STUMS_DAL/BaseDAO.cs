@@ -11,7 +11,7 @@ namespace STUMS_DAL
 {
     public partial class BaseDAO<T> where T : class, new() 
     {
-        private DbContext dbContext = MyDBContextFactory.Create();
+        public MyDBContext dbContext = MyDBContextFactory.Create();
 
         public void Add(T t)
         {
@@ -32,7 +32,7 @@ namespace STUMS_DAL
         {
             return dbContext.Set<T>().Where(whereLambda);
         }
-
+      
         public IQueryable<T> GetModelsByPage<type>(int pageSize, int pageIndex, bool isAsc,
             Expression<Func<T, type>> OrderByLambda, Expression<Func<T, bool>> WhereLambda)
         {
@@ -51,7 +51,5 @@ namespace STUMS_DAL
         {
             return dbContext.SaveChanges() > 0;
         }
-
-
     }
 }

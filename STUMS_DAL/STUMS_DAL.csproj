@@ -53,6 +53,11 @@
   <ItemGroup>
     <Compile Include="BaseDAO.cs" />
     <Compile Include="DAO\SchoolDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Migrations\202101170924419_addUser.cs" />
+    <Compile Include="Migrations\202101170924419_addUser.Designer.cs">
+      <DependentUpon>202101170924419_addUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyDBContext.cs" />
     <Compile Include="MyDBContextFactory.cs" />
@@ -70,6 +75,11 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101170924419_addUser.resx">
+      <DependentUpon>202101170924419_addUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
