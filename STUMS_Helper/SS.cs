@@ -62,6 +62,25 @@ namespace STUMS_Helper
         }
         #endregion
 
+        #region UserPwd Encrypt
+        public static string UserEncrypt(string usercode)
+        {
+            return new UserPwdEncryptHelper().UserEncrypt(usercode);
+        }
+        public static string UserDecrypt(string userCryStr)
+        {
+            return new UserPwdEncryptHelper().UserDecrypt(userCryStr);
+        }
+        public static string PwdEncrypt(string pwd)
+        {
+            return new UserPwdEncryptHelper().PwdEncrypt(pwd);
+        }
+        public static string PwdDecrypt(string pwdCryStr)
+        {
+            return new UserPwdEncryptHelper().PwdDecrypt(pwdCryStr);
+        }
+        #endregion
+
         /// <summary>
         /// 处理异常报错信息，取得自己需要的异常信息
         /// </summary>

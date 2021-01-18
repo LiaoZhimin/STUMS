@@ -20,7 +20,7 @@ namespace STUMS_DAL
             {
                 dbContext = new MyDBContext();               
                 dbContext.Database.CreateIfNotExists();// 如果数据库不存在，则调用EF内置的API创建数据库
-                CallContext.SetData("DbContext", dbContext);               
+                CallContext.SetData("MyDBContext", dbContext);               
             }
             return dbContext;
 
