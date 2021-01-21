@@ -31,7 +31,7 @@
 
 <body class="flat-blue sidebar-collapse">
     @{
-        STUMS.Models.LayoutData ld = ViewBag.LayoutData;
+        STUMS.Models.LayoutData ld = ViewBag.LayoutData??new STUMS.Models.LayoutData();
     }
     <div class="sidebar">
         <div class="menu-control toggle-sidebar">
