@@ -30,9 +30,6 @@
 </head>
 
 <body class="flat-blue sidebar-collapse">
-    @{
-        STUMS.Models.LayoutData ld = ViewBag.LayoutData??new STUMS.Models.LayoutData();
-    }
     <div class="sidebar">
         <div class="menu-control toggle-sidebar">
             <a class="navbar-brand" href="#"><i class="fa fa-bar-chart"></i> LZM STUMS</a><!--滑动条打开 网站名称/Logo -->
@@ -192,22 +189,27 @@
 
                         <!-- 登陆用户的信息 -->
                         <li class="dropdown">
+                            @{
+                                string tk = this.Request.Cookies["UUUU"]?.ToString() ?? "";
+                                STUMS.Models.LayoutData ld = STUMS.Models.LayoutData.getUserMsgFromCookie(tk);
+                            }
 
                             @if (ld.IsLogin)
                             {
-                                //
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emily Hart<span class="caret"></span></a>
+                                //用户已登录，显示用户信息
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@ld.UserName<span class="caret"></span></a>
                                 <ul class="dropdown-menu user-info">
                                     <li class="dropdown-title-bar">
                                         <img src="images/profile.jpg" class="profile-img">
                                     </li>
                                     <li>
                                         <div class="navbar-login">
-                                            <h4 class="user-name">Emily Hart</h4>
-                                            <p>emily_hart@email.com</p>
+                                            <h4 class="user-name">@ld.UserName</h4>
+                                            <p>@ld.Email</p>
                                             <div class="btn-group margin-bottom-2x" role="group">
-                                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
-                                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> 个人信息</button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> 退出登录</button>
                                             </div>
                                         </div>
                                     </li>
@@ -215,19 +217,62 @@
                             }
                             else
                             {
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sign In<span class="caret"></span></a>
-                                <ul class="dropdown-menu user-info">
-                                    <li>
-                                        <div class="navbar-login">
-                                            <h4 class="user-name">Emily Hart</h4>
-                                            <p>emily_hart@email.com</p>
-                                            <div class="btn-group margin-bottom-2x" role="group">
-                                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
-                                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
-                                            </div>
+                                // 用户没有登录，操作登录框 
+
+                                <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">点击登录<span class="caret"></span></a>
+                                <div class="box">
+                                    <form id="login-form">
+                                        <div class="control">
+                                            <div class="label">账号：</div>
+                                            <input type="text" id="UUUU" class="form-control" placeholder="XXXXXX" />
                                         </div>
-                                    </li>
-                                </ul>
+                                        <div class="control">
+                                            <div class="label">密码：</div>
+                                            <input type="password" id="PPPP" class="form-control" placeholder="******" />
+                                        </div>
+                                        <div>
+                                            <label id="lbl_login_msg"></label>
+                                        </div>
+                                        <div class="login-button">
+                                            <input type="button" onclick="login()" class="btn btn-orange" value="登录" />
+                                            <script>
+                                                var isLoginClick = false;
+                                                function login() {
+                                                    if (!isLoginClick) {
+                                                        showMsg("", true, true);
+                                                        var dic = {
+                                                            'UUUU': $('#UUUU').val(),
+                                                            'PPPP': $('#PPPP').val()
+                                                        };
+                                                        if (!dic.UUUU) {
+                                                            showMsg("请输入账号！！！", false, false);
+                                                            return;
+                                                        }
+                                                        if (!dic.PPPP) {
+                                                            showMsg("请输入密码！！！", false, false);
+                                                            return;
+                                                        }
+                                                        $.post('/API/Lgn', dic, r=> {
+                                                            if (r == "OK") {
+                                                                showMsg(r, true, false);
+                                                                window.location.reload();
+                                                            } else {
+                                                                showMsg(r, false, false);
+                                                            }
+                                                        });
+
+                                                        setTimeout(() => { showMsg("登录超时！", false, false); }, 30 * 1000);
+                                                    }
+                                                }
+                                                function showMsg(msg, b, isClick) {
+                                                    isLoginClick = isClick;
+                                                    $('#lbl_login_msg').text(msg);
+                                                    $('#lbl_login_msg').css("color",(b?"green":"red"));
+                                                }
+                                            </script>
+                                        </div>
+                                    </form>
+                                </div>
                             }
 
                         </li>

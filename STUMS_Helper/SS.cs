@@ -81,6 +81,7 @@ namespace STUMS_Helper
         }
         #endregion
 
+        #region 代码异常信息处理
         /// <summary>
         /// 处理异常报错信息，取得自己需要的异常信息
         /// </summary>
@@ -94,5 +95,8 @@ namespace STUMS_Helper
                 + "--" + ex.Message;
             return msg;
         }
+        #endregion
+
+
     }
 }
