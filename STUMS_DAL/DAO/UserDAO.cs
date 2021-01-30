@@ -13,9 +13,9 @@ namespace STUMS_DAL.DAO
         {
             // var rlt = this.dbContext.Users.Find(new { UserCode = usercode, Pwd = pwd });
             var rlt = GetModels(u => u.UserCode == usercode && u.Pwd == pwd).ToList();
-            return rlt.Count>0?rlt[0]: null;
+            return rlt.Count > 0 ? rlt[0] : null;
         }
-       
+
     }
 }
 

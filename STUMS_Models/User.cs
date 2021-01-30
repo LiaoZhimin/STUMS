@@ -17,5 +17,8 @@ namespace STUMS_Models
         public int State { get; set; }
         public string Editor { get; set; }
         public DateTime EditTime { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
     }
 }

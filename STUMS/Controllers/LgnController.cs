@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;
+
 
 namespace STUMS.Controllers
 {
+    using System.Web.Http;
+
     public class LgnController : ApiController
     {
         /// <summary>
@@ -16,7 +18,11 @@ namespace STUMS.Controllers
         /// <returns></returns>
         public string Post([FromBody]STUMS_Models.Lgn_M mm)
         {
-            return "OK";
+            mm.PPPP = STUMS_Helper.SS.PwdEncrypt(mm.PPPP);
+            var tk = SS.SetUserToken(mm);
+            if (string.IsNullOrEmpty (tk)) { return "NG"; }
+            return "OK,"+tk;
         }
+
     }
 }

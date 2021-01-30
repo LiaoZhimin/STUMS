@@ -193,6 +193,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Attributes\BaseAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LgnController.cs" />
     <Compile Include="Global.asax.cs">
@@ -201,6 +202,7 @@
     <Compile Include="Models\LayoutData.cs" />
     <Compile Include="Models\MsgBoxData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SS.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

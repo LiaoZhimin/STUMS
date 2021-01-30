@@ -92,16 +92,15 @@
                         showMsg("请输入密码！！！", false, false);
                         return;
                     }
-                    $.post('/API/Lgn', dic, r=> {
-                        if (r == "OK") {
+                    $.post('/Home/Lgn', dic, r=> {
+                        if (r.indexOf("OK")>=0) {
                             showMsg(r, true, false);
                             window.location.href = "/";
                         }else {
                             showMsg(r, false, false);
                         }
                     });
-
-                    setTimeout(() => { showMsg("登录超时！", false, false); }, 30 * 1000);
+                    //setTimeout(() => { showMsg("登录超时！", false, false); }, 30 * 1000);
                 }
             });
             // msg:显示的信息，为空不显示，b:控制对错颜色，isclick:控制是否点击
@@ -124,6 +123,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

@@ -10,7 +10,7 @@ namespace STUMS.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        [Attributes.Base]
         public ActionResult Index()
         {
             //STUMS_DAL.DAO.SchoolDAO dao = new STUMS_DAL.DAO.SchoolDAO();
@@ -35,11 +35,10 @@ namespace STUMS.Controllers
             return View();
         }
 
-
         public ActionResult Lgn(Lgn_M mm)
         {
-
-            return View();
+            string msg = SS.SetUserToken(this.HttpContext, mm);
+            return Content(msg);
         }
     }
 }

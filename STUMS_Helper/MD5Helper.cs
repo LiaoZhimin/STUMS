@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace STUMS_Helper
 {
+    using System;
+    using System.IO;
+    using System.Security.Cryptography;
+    using System.Text;
     internal class MD5Helper
     {
         public string MD5Encrypt(string value, string key)

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace STUMS_Helper
 {
+    using System;
     public class SS
     {
         #region Log
@@ -97,6 +93,17 @@ namespace STUMS_Helper
         }
         #endregion
 
+        #region Token
+        public static string TokenEncrypt(string msg, int expireMinu = 480)
+        {           
+            return new UserPwdEncryptHelper().TokenEncrypt(msg,expireMinu) ;
+        }
+        public static string TokenDecrypt(string tk)
+        {
+            return new UserPwdEncryptHelper().TokenDecrypt(tk);
+        }
+        #endregion
 
     }
+
 }

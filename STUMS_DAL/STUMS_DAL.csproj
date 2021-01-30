@@ -58,6 +58,10 @@
     <Compile Include="Migrations\202101170924419_addUser.Designer.cs">
       <DependentUpon>202101170924419_addUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101300842261_UserColNameEmailPhone.cs" />
+    <Compile Include="Migrations\202101300842261_UserColNameEmailPhone.Designer.cs">
+      <DependentUpon>202101300842261_UserColNameEmailPhone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyDBContext.cs" />
     <Compile Include="MyDBContextFactory.cs" />
@@ -79,6 +83,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101170924419_addUser.resx">
       <DependentUpon>202101170924419_addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101300842261_UserColNameEmailPhone.resx">
+      <DependentUpon>202101300842261_UserColNameEmailPhone.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

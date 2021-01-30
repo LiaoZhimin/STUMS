@@ -190,8 +190,7 @@
                         <!-- 登陆用户的信息 -->
                         <li class="dropdown">
                             @{
-                                string tk = this.Request.Cookies["UUUU"]?.ToString() ?? "";
-                                STUMS.Models.LayoutData ld = STUMS.Models.LayoutData.getUserMsgFromCookie(tk);
+                                STUMS.Models.LayoutData ld = STUMS.Models.LayoutData.getUserMsgFromToken(this.Context);
                             }
 
                             @if (ld.IsLogin)

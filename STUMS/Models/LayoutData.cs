@@ -31,11 +31,14 @@ namespace STUMS.Models
         /// <summary>
         /// 从cookie的tk中提取用户信息
         /// </summary>
-        /// <param name="tk"></param>
         /// <returns></returns>
-        public static LayoutData getUserMsgFromCookie(string tk)
+        public static LayoutData getUserMsgFromToken(HttpContextBase hcb)
         {
-            string s = STUMS_Helper.SS.UserDecrypt(tk);
+            string s = SS.GetTKValue(hcb);
+            if (string.IsNullOrEmpty(s))
+            {
+                return new LayoutData();
+            }
             string[] ss = s.Split('|');
             LayoutData ld = new LayoutData()
             {
@@ -47,20 +50,5 @@ namespace STUMS.Models
             return ld;
         }
 
-        /// <summary>
-        /// 将LayoutData的信息 加密成token
-        /// </summary>
-        /// <param name="ld"></param>
-        /// <returns></returns>
-        public static string getCookieTokenFrom(LayoutData ld)
-        {
-            if (string.IsNullOrEmpty(ld.UserCode))
-            {
-                return "";
-            }
-            string s = ld.UserCode + "|" + ld.UserName + "" + ld.Email;
-            s = STUMS_Helper.SS.UserEncrypt(s);
-            return s;
-        }
     }
 }
