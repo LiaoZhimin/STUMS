@@ -194,8 +194,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\BaseAttribute.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\DORController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LgnController.cs" />
+    <Compile Include="Controllers\ScClsController.cs" />
+    <Compile Include="Controllers\STUController.cs" />
+    <Compile Include="Controllers\TCHController.cs" />
+    <Compile Include="Controllers\WOKController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -229,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Course\" />
+    <Folder Include="Views\DOR\" />
+    <Folder Include="Views\ScCls\" />
+    <Folder Include="Views\STU\" />
+    <Folder Include="Views\TCH\" />
+    <Folder Include="Views\WOK\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\STUMS_DAL\STUMS_DAL.csproj">

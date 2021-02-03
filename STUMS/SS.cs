@@ -10,7 +10,7 @@ namespace STUMS
     {
 
         #region Token UserCode
-        public static string tkName = "asdzxqwsws";
+        public static string tkName = "worktogether";
 
         // 返回tk，用于webapi，返回生成的 token
         public static string SetUserToken(STUMS_Models.Lgn_M mm)
@@ -42,8 +42,6 @@ namespace STUMS
             return GetTKValue(hcb).Split('|')[0];
         }                
         #endregion
-
-
 
     }
 }

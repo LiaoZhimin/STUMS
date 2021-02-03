@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAO.cs" />
+    <Compile Include="DAO\MajorDAO.cs" />
     <Compile Include="DAO\SchoolDAO.cs" />
+    <Compile Include="DAO\TeacherDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Migrations\202101170924419_addUser.cs" />
     <Compile Include="Migrations\202101170924419_addUser.Designer.cs">
