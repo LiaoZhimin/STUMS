@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace STUMS.Controllers
 {
-    // 课
-    public class CourseController : Controller
+    // 奖 惩
+    public class PNHController : Controller
     {
-        // GET: Course
+        // GET: PNH
         public ActionResult Index()
         {
             return View();

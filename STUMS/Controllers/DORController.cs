@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace STUMS.Controllers
 {
+    // 宿
     public class DORController : Controller
     {
         // GET: DOR
@@ -13,6 +14,8 @@ namespace STUMS.Controllers
         {
             return View();
         }
+
+
 
     }
 }

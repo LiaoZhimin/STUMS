@@ -198,6 +198,7 @@
     <Compile Include="Controllers\DORController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LgnController.cs" />
+    <Compile Include="Controllers\PNHController.cs" />
     <Compile Include="Controllers\ScClsController.cs" />
     <Compile Include="Controllers\STUController.cs" />
     <Compile Include="Controllers\TCHController.cs" />
@@ -237,6 +238,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Course\" />
     <Folder Include="Views\DOR\" />
+    <Folder Include="Views\PNH\" />
     <Folder Include="Views\ScCls\" />
     <Folder Include="Views\STU\" />
     <Folder Include="Views\TCH\" />

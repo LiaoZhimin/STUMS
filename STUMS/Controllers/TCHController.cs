@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace STUMS.Controllers
 {
+    // 师
     public class TCHController : Controller
     {
         // GET: TCH
